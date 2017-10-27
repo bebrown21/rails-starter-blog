@@ -4,6 +4,19 @@
   height: 75vh;
 }
 
+.form-horizontal {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.message-alert {
+  margin: 1em;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -26,4 +39,32 @@ footer {
 
 .content-container {
   padding: 2em;
+}
+
+.show-container {
+  padding: 1.5em;
+  margin-top: 1em;
+  border-radius: 4px;
+  background-color: #eceeef;
+
+  .article-actions {
+    padding-top: 1em;
+  }
+
+  .article-title {
+    font-weight: bold;
+    padding-bottom: .5em;
+    font-size: 24px;
+    border-bottom: 1px solid grey;
+  }
+
+  .article-body {
+    padding: 1em;
+    font-size: 18px;
+  }
+
+  .article-links {
+    padding-top: 5px;
+    border-top: 1px solid grey;
+  }
 }
