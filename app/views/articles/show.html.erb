@@ -1,5 +1,23 @@
 <h2 align="center">Title: <%= @article.title %></h2>
 <div class="col-sm-8 mx-auto show-container">
+  <% if @article.user %>
+    <ul align="center" class="listing">
+      <div class="col-sm-8 mx-auto">
+        <li>Created by:</li>
+        <li>
+          <%= link_to(gravatar_for(@article.user), user_path(@article.user)) if @article.user %>
+        </li>
+        <li class="article-title">
+          <%= link_to(@article.user.username, user_path(@article.user)) if @article.user %>
+        </li>
+        <li>
+          <small>
+            <%= pluralize(@article.user.articles.count, "article") if @article.user.articles %>
+          </small>
+        </li>
+      </div>
+    </ul>
+    <% end %>
   <h3 class="center description">Description:</h3>
   <hr>
   <%= simple_format(@article.description) %>
